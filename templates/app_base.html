@@ -1,0 +1,86 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+    </style>
+    {% tailwind_css %}
+</head>
+
+<body>
+    <header>
+        <nav class="bg-stone-950 shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 py-4">
+                <div class="text-white flex justify-center font-medium font-serif">
+                    Get assist from your AI Doctor
+                </div>
+                <div class="flex justify-center items-center space-x-3">
+                    <!-- Navigation Links -->
+                    <a href="/home" class="text-white hover:text-blue-400">Home</a>
+                    <a href="/result" class="text-white hover:text-blue-400">Recommendations</a>
+                    <a href="/about" class="text-white hover:text-blue-400">About</a>
+                    <a href="#" class="text-white hover:text-blue-400">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <h5 class="text-lg font-bold mb-2">How it works</h5>
+                    <p class="text-sm">Our medicine recommendation system uses a Random Forest Classifier, a powerful machine learning algorithm known for its accuracy and robustness. The system analyzes a wide range of patient data, including medical history, symptoms, and other relevant factors, to suggest the most appropriate medications.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-2">My Mission</h5>
+                    <p class="text-sm">My mission is to provide accurate and personalized medicine recommendations to enhance patient outcomes and streamline the healthcare process.I believe in leveraging the power of advanced machine learning algorithms to deliver the best possible care.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-2">Important Note</h5>
+                    <p class="text-sm">Our Medicine Recommendation System is designed to assist and support, but it is not a substitute for professional medical advice. Always seek the guidance of a qualified healthcare provider with any questions you may have regarding your health or medical conditions.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-2">Quick Links</h5>
+                    <ul>
+                        <li><a href="/home" class="text-sm text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="/about" class="text-sm text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-2">Contact Me</h5>
+                    <p class="text-sm">Email: desanju2233@gmail.com</p>
+                    <a href="https://www.linkedin.com/in/sanju-de-88931225a" class="text-sm">Linkedin: sanju-de-88931225a</a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="text-sm text-gray-400">All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

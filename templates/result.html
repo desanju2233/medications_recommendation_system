@@ -1,0 +1,53 @@
+{% extends 'app_base.html' %}
+
+{% block title %}
+Result
+{% endblock %}
+
+{% block content %}
+<div class = "bg-slate-500 py-2">
+<div class="text-3xl text-gray-950 text-center mb-8 font-bold font-serif">AI generated result</div>
+<div class="mx-auto max-w-lg px-4">
+    <div class="mb-4">
+        <strong class="block text-lg text-gray-800 mb-2">Disease:</strong>
+        <span class="block bg-gray-100 px-4 py-2 rounded-lg">{{ result }}</span>
+    </div>
+    <div class="mb-4">
+        <strong class="block text-lg text-gray-800 mb-2">Description:</strong>
+        <span class="block bg-gray-100 px-4 py-2 rounded-lg">{{ description }}</span>
+    </div>
+    <div class="mb-4">
+        <strong class="block text-lg text-gray-800 mb-2">Medications:</strong>
+        <span class="block bg-gray-100 px-4 py-2 rounded-lg">
+            {% for item in medications %}
+            <li class="mb-2">{{ item }}</li>
+            {%endfor%}
+        </span>
+    </div>
+    <div class="mb-4">
+        <strong class="block text-lg text-gray-800 mb-2">Diets:</strong>
+        <span class="block bg-gray-100 px-4 py-2 rounded-lg">
+            {% for item in diets %}
+            <li class="mb-2">{{ item }}</li>
+            {%endfor%}
+        </span>
+    </div>
+    <div class="mb-4">
+        <strong class="block text-lg text-gray-800 mb-2">Precautions:</strong>
+        <span class="block bg-gray-100 px-4 py-2 rounded-lg">
+            {% for item in precautions%}
+            <li class="mb-2">{{ item }}</li>
+            {% endfor %}
+        </span>
+    </div>
+    <div class="mb-4">
+        <strong class="block text-lg text-gray-800 mb-2">Workout:</strong>
+        <span class="block bg-gray-100 px-4 py-2 rounded-lg">
+        {% for tip in workout %}
+        <li class="mb-2">{{ tip }}</li>
+        {% endfor %}
+        </span>
+    </div>
+</div>
+</div>
+{% endblock %}

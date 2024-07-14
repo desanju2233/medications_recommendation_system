@@ -1,0 +1,37 @@
+{% extends 'app_base.html' %}
+
+{% block title %}
+Checkbox Form
+{% endblock %}
+
+{% block content %}
+<div class = "bg-slate-500 py-2">
+<div class="max-w-lg mx-auto px-4 bg-slate-400">
+    <form method="post" class="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <p class="py-2 font-semibold text-blue-700">
+            Begin by entering the symptoms you are experiencing into the provided checkboxes. Be as specific as possible to ensure accurate recommendations.
+        </p>
+        {% csrf_token %}
+        
+        <!-- Render checkboxes from the form -->
+        <div class="mb-4">
+            {% for field in form %}
+                <label class="block text-gray-800 text-x font-bold mb-2">
+                    {{ field.label }}
+                     : {{ field }}
+                </label>
+                <div class="mt-1">
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="flex items-center justify-center mt-4">
+            <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline">
+                Submit
+            </button>
+        </div>
+        
+    </form>
+</div>
+</div>
+{% endblock %}
