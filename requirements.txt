@@ -143,7 +143,7 @@ threadpoolctl==3.5.0
 tifffile==2025.1.10
 tokenizers==0.21.0
 toml==0.10.2
-torch==2.4.1+cu118
+torch==2.4.1
 torch-directml==0.2.5.dev240914
 torchaudio==2.4.1+cu118
 torchvision==0.19.1
