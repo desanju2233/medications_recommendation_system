@@ -2,7 +2,7 @@
 
 ## Introduction
 The **Medication Recommendation System** is a web-based application designed to help users get medication recommendations based on their symptoms. It uses **Machine Learning (Random Forest model)** trained on medical data to provide accurate predictions. The project is built with **Django** for the backend, **Tailwind CSS** for styling, and is deployed on **Render**.
-🔗 **Live Demo**: [Medication Recommendation System](https://medication-recommendation.onrender.com/home)
+🔗 **Live Demo**: [Medication Recommendation System]([https://medication-recommendation.onrender.com/home](https://medications-recommendation-system.onrender.com/home)
 
 ## Features
 - **User Input Form**: Users can enter symptoms to receive medication suggestions.
