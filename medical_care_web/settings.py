@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-*8u^+=o0xxsa)r(mw2*!7yesbak&j@e@rvn(zpg#!ri($4tc4&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["medications-recommendation-system.onrender.com"]
 
 
 # Application definition
@@ -51,11 +51,18 @@ INTERNAL_IPS = [
 
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
+CSRF_COOKIE_SECURE = True  # Ensures CSRF cookie is only sent over HTTPS
+SESSION_COOKIE_SECURE = True  # Same for session cookie
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://medications-recommendation-system.onrender.com"
+]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
+    # "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
